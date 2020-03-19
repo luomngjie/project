@@ -1,0 +1,98 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "基础项目",
+			"app-plus": {
+				"titleNView": {
+					"buttons": [{
+						"text": "\ue534",
+						"fontSrc": "/static/uni.ttf",
+						"fontSize": "22px",
+						"color": "#FFFFFF"
+					}]
+				}
+			}
+		}
+		},{
+			"path": "pages/purchase/purchase",
+			"style": {
+				"navigationBarTitleText": "拼团",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue534",
+							"fontSrc": "/static/uni.ttf",
+							"fontSize": "22px",
+							"color": "#FFFFFF"
+						}]
+					}
+				}
+			}
+		},{
+			"path": "pages/shopcart/shopcart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"app-plus": {
+					// "titleNView": {
+					// 	"buttons": [{
+					// 		"text": "\ue534",
+					// 		"fontSrc": "/static/uni.ttf",
+					// 		"fontSize": "22px",
+					// 		"color": "#FFFFFF"
+					// 	}]
+					// }
+				}
+			}
+		},{
+		"path": "pages/main/main",
+		"style": {
+			"navigationBarTitleText": "我的",
+			"app-plus": {
+				// "titleNView": {
+				// 	"buttons": [{
+				// 		"text": "\ue534",
+				// 		"fontSrc": "/static/uni.ttf",
+				// 		"fontSize": "22px",
+				// 		"color": "#FFFFFF"
+				// 	}]
+				// }
+			}
+		}
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-appfsdf",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#FFFFFF",
+		"navigationStyle":"default"//custom取消默认头部导航
+	},
+	"tabBar":{
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list":[{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "首页"
+			},{
+				"pagePath": "pages/purchase/purchase",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "拼团"
+			},{
+				"pagePath": "pages/shopcart/shopcart",
+				"iconPath": "static/component.png",
+				"selectedIconPath": "static/componentHL.png",
+				"text": "购物车"
+			},{
+				"pagePath": "pages/main/main",
+				"iconPath": "static/template.png",
+				"selectedIconPath": "static/templateHL.png",
+				"text": "我的"
+			}
+		]
+	}
+}
