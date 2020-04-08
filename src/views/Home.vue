@@ -5,7 +5,7 @@
 	
 </style>
 <template> 
-  <div> 
+  <div>  
   	<el-row :gutter="10" >
 	  	<el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" v-for="(item,index) in list" :key="index">
 		  	<el-card shadow="always" :body-style="{height:'17rem'}">
