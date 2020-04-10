@@ -20,54 +20,56 @@
 import chart from '@/components/chart.vue'
 let Mock = require('mockjs')
 export default {
-  name: 'Home',
-  data(){
-  	return {
-  		list:[
-	        {
-	          id:"1",
-	          name:"和金额库"
-	        },
-	        {
-	          id:"2",
-	          name:"heku1"
-	        },
-	        {
-	          id:"3",
-	          name:"何苦呢"
-	        },
-      ]
-  	}
-  },
-  components: {
-    chart
-  },
-  mounted(){
-  	this.$nextTick(()=>{
-  		var Random = Mock.Random
-  // 		var template = {
-		//     'key|1-10': '★'
-		// }
-  		var template = {
-  			
-		    name: 'value1',
-		  
-		}
-		var data = {
-		    name: 'value2',
+	inject: ['reload'], // 引入方法
+	name: 'Home',
+	data(){
+	  	return {
+	  		list:[
+		        {
+		          id:"1",
+		          name:"和金额库"
+		        },
+		        {
+		          id:"2",
+		          name:"heku1"
+		        },
+		        {
+		          id:"3",
+		          name:"何苦呢"
+		        },
+	      ]
+	  	}
+	},
+	components: {
+	    chart
+	},
+  	mounted(){
+  		// this.reload()  // 哪里需要在哪里调用
+	  	this.$nextTick(()=>{
+	  		var Random = Mock.Random
+	  		// 		var template = {
+			//     'key|1-10': '★'
+			// }
+	  		var template = {
+	  			
+			    name: 'value1',
+			  
+			}
+			var data = {
+			    name: 'value2',
 
-		}
-		console.log(Mock.valid(template,data))
-  	})
-  },
-  methods:{
+			}
+			//console.log(Mock.valid(template,data))
+	  	})
+  	},
+ 	 methods:{
   	
-  },
+  	},
   
-  computed: {
-    img(){
-    	return getExplorer()
-    }
-  },
+  	computed: {
+	    img(){
+	    	return getExplorer()
+	    }
+  	},
 }
 </script>
