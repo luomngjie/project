@@ -5,9 +5,10 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
+
 import echarts from 'echarts' // 引入echarts中国地图数据
 require('echarts/map/js/china')
-
+require('./libs/mock.js')
 /**CSS**/
 import 'element-ui/lib/theme-chalk/index.css'
 
@@ -17,6 +18,7 @@ Vue.use(ElementUI);
 /**实例挂载***/
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
+// Vue.prototype.$ = jq
 
 new Vue({
   router,
