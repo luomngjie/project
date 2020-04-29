@@ -75,15 +75,23 @@ export default {
  			console.log(this.value)
  		},
  		async getWares(){
- 			const key = 'dates';
- 			let promiseD = promiseCache.get(key);
- 			if(!promiseD){
- 				promiseD = await this.$store.dispatch('call',{
-	 				url:'/api/goods'
-	 			});
-	 			promiseCache.set(key,promiseD);
-	 			//console.log(promiseD)
- 			}
+ 			this.$https({
+ 				url:"/api/goods",
+ 				method:'post'
+ 			}).then(res=>{
+ 				console.log(res)
+ 			}).catch(error=>{
+ 				console.log(error)
+ 			})
+ 			// const key = 'dates';
+ 			// let promiseD = promiseCache.get(key);
+ 			// if(!promiseD){
+ 			// 	promiseD = await this.$store.dispatch('call',{
+	 		// 		url:'/api/goods'
+	 		// 	});
+	 		// 	promiseCache.set(key,promiseD);
+	 		// 	console.log(promiseD)
+ 			// }
  		}
   	},
   

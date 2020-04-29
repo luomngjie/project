@@ -5,6 +5,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
+import request from '@/vendor/request'
 
 import echarts from 'echarts' // 引入echarts中国地图数据
 require('echarts/map/js/china')
@@ -18,6 +19,7 @@ Vue.use(ElementUI);
 /**实例挂载***/
 Vue.config.productionTip = false
 Vue.prototype.$echarts = echarts
+Vue.prototype.$https = request
 // Vue.prototype.$ = jq
 
 new Vue({
