@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "indexComponent":"/components/indexComponent/indexComponent",
+    "otherComponent":"/components/otherComponent/otherComponent"
+  }
+}

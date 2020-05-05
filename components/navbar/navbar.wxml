@@ -1,0 +1,18 @@
+<!--components/navbar/navbar.wxml-->
+<!-- 组件模板 -->
+<view class="wrapper">
+
+  <slot></slot>
+    <view class='tit_seabox'>
+       <text class='iconfont icon-kefu' style="margin:0 15rpx 0 0;"></text>
+        <view class="tit_seabox_bar {{addflag?'tit_seabox_add':''}} {{searchflag?'tit_start_search':''}}">
+            <icon type='search' size="32rpx" style=" margin-right: 20rpx;"></icon>
+            <input type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='搜索' class='search-box'/>
+            <icon bindtap='activity_clear' wx:if="{{searchflag}}" type='clear' size="28rpx" style=" margin-right: 20rpx;"></icon>
+        
+        </view>
+        <view wx:if="{{searchflag}}" bindtap='cancelsearch' class="activity_seabtn">搜索</view>
+        <view class='activity_add' wx:if="{{addflag}}">搜索</view>
+    </view>
+   
+</view>

@@ -1,0 +1,42 @@
+<!--components/indexComponent/indexComponent.wxml-->
+<view class="content">
+  <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+           <image src="{{item.url}}" class="swiper-item"></image>
+          </swiper-item>
+        </block>
+  </swiper>
+</view>
+<view class="iconSwiper">
+    <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{isonSwiper}}" interval="{{interval}}" duration="{{duration}}"
+          style="height:190px;">
+            <block >
+              <swiper-item wx:for="{{pages}}" wx:for-item="iconUrl"   wx:for-index="idx" wx:key="idx">
+                <view class="icons" wx:for="{{iconUrl}}" wx:for-index="idx" wx:key="idx" wx:for-item = "iconItem">
+                  <view class="iconImg">
+                    <image src="{{iconItem.url}}" class="swiper-img"></image>
+                  </view>
+                  <view class="icon-desc">{{iconItem.title}}</view>
+                </view>
+              </swiper-item>
+            </block>
+    </swiper>
+</view>
+<view class="shops">
+  <view class="shops-list" wx:for="{{30}}" wx:for-item='shop' wx:for-index="idx" wx:key="idx">
+    <view class="shop-img">
+      <image src="../../pages/images/tooopen_sy_143912755726.jpg"   mode="scaleToFill" class="shop-img-detail"></image>
+    </view>
+    <view class="shop-info">
+      <view class="shop-info-title">这是商这是商品标题这是商这是商品标题这是商品标题这是商品这是商这是商品标题这是商品标题这是商品这是商品标题这是商品标题品标题</view>
+      <view class="shop-info-content">
+        <view class="shop-price">￥50</view>
+        <view class="shop-similar">看相似</view>
+      </view>
+    </view>
+  </view>
+</view>
+ 

@@ -1,0 +1,63 @@
+@import '/access/css/iconfont.wxss';
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  width:100%;
+  height:100%;
+}
+.container-slide-bar{
+  display:flex;
+  flex-direction: row;
+}
+.scroll-tab{
+  width:80%;height:80rpx;
+}
+.nav{
+  width: 100%;height:100%;box-sizing: border-box;
+  overflow: hidden;line-height: 80rpx;
+  font-size: 16px; top: 0;
+  left: 0;
+  z-index: 99;
+  white-space: nowrap;
+}
+.nav-item{
+  text-overflow: ellipsis;overflow: hidden;
+  width: 20%;text-align: center;display: inline-block;white-space: nowrap;
+}
+.fixed-tab{
+  width:20%;height:80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+/* .fixed-tab::before{
+  content: '';height:40rpx;top:18rpx;position: absolute;
+  left:10rpx;border-left:1px solid blue;
+} */
+.category{
+ font-size: 16px;line-height: 80rpx;
+}
+.active{
+  color:red;
+}
+.tab-box{
+  /* background: greenyellow;
+  padding-top: 80rpx; */
+  height: 100%;
+  box-sizing: border-box;
+}
+.tab-content{
+  overflow-y: scroll;
+}
+  /*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+  
+  
+  

@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/jingxuan/jingxuan",
+    "pages/car/car",
+    "pages/main/main",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#aaa",
+    "navigationBarTitleText": "云擎小程序",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "selectedColor":"red",
+    "backgroundColor":"#fff",
+    "position":"bottom",
+    "borderStyle":"black",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text": "首页",
+        "iconPath":"pages/images/index.png",
+        "selectedIconPath":"pages/images/index1.png"
+      },
+      {
+        "text": "精选",
+        "pagePath":"pages/jingxuan/jingxuan",
+        "iconPath":"pages/images/jingxuan.png",
+        "selectedIconPath":"pages/images/jingxuan1.png"
+      },
+      {
+        "text": "购物车",
+        "pagePath":"pages/car/car",
+        "iconPath":"pages/images/shoping1.png",
+        "selectedIconPath":"pages/images/shopping-cart.png"
+      },
+      {
+        "text": "我的",
+        "pagePath":"pages/main/main",
+        "iconPath":"pages/images/main.png",
+        "selectedIconPath":"pages/images/people_fill.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
