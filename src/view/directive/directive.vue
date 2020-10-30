@@ -119,6 +119,10 @@ export default {
   padding-top: 10px;
 }
 </style>
+ <button @click="returnCountry">返回全国</button>
+  <div class="mapp">
+   <aMap :reContry="reContry"></aMap>
+ </div>
  -->
 
  <template>
