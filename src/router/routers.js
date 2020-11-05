@@ -319,7 +319,7 @@ export default [
         name: 'error_logger_page',
         meta: {
           icon: 'ios-bug',
-          title: '错误收集'
+          title: '地图选址'
         },
         component: () => import('@/view/single-page/error-logger.vue')
       }

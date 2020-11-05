@@ -33,7 +33,7 @@ export default {
   content: 'This is the modal box content.',
   buttonText: 'Show Modal',
   'i18n-tip': 'Note: Only this page is multi-language, other pages do not add language content to the multi-language package.',
-  error_store_page: 'Error Collection',
+  error_store_page: 'Location map',
   error_logger_page: 'Error Logger',
   query: 'Query',
   params: 'Params',

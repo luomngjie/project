@@ -15,7 +15,8 @@
       </Input>
     </FormItem>
     <FormItem>
-      <Button @click="handleSubmit" type="primary" long>登录</Button>
+      <!-- <button  @click="handleSubmit">登录</button> -->
+      <Button  @mousedown.native="handleSubmit" @mouseup.native="up" type="primary"  class="btn " :class="{'animate':isshow}">登录</Button>
     </FormItem>
   </Form>
 </template>
@@ -42,6 +43,7 @@ export default {
   },
   data () {
     return {
+      isshow: false,
       form: {
         userName: 'super_admin',
         password: ''
@@ -57,7 +59,12 @@ export default {
     }
   },
   methods: {
+
+    up () {
+      setTimeout(() => { this.isshow = false }, 500)
+    },
     handleSubmit () {
+      this.isshow = true
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
           this.$emit('on-success-valid', {
@@ -70,3 +77,7 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+  @import './style.less';
+</style>
