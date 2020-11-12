@@ -1,7 +1,10 @@
-var express = require('express');
-var router = express.Router();
-const db = require("../config/api.js")
-var vertoken=require('../config/token/token')//设置token方法
+const express = require('express'),
+	  router = express.Router(),
+	  until = require("../config/until/until.js"),//公共方法封装
+	  db = require("../config/api.js"),//mysql连接池配置文件* 请求方法封装 增删改查
+	  images = require('images'),
+	  path = require('path'),
+	  vertoken=require('../config/token/token');//设置token方法
 
 /* GET home page.首页 */
 router.get('/', function(req, res, next) {
@@ -27,6 +30,11 @@ router.get('/login', function(req, res, next) {
 	res.send({msg:"登录成功",code:1,data:[]})
 	//res.render('login', {})
 });
+
+/**视频去水印**/
+router.get("/video",(req, res, next)=>{
+	until.Videowm(req, res, next)
+})
 
 
 module.exports = router;
