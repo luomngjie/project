@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/main/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "勇信去水印",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color": "#a9b7b7",
+    "fontSize":"24rpx",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "black" ,
+    "list": [{
+      "selectedIconPath":"/pages/image/home_active.png",
+      "iconPath":"/pages/image/home.png",
+      "pagePath":"pages/index/index",
+      "text": "首页"
+    }, {
+      "selectedIconPath":"/pages/image/wode_active.png",
+      "iconPath":"/pages/image/wode.png",
+      "pagePath":"pages/main/main",
+      "text":"我的"
+     
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

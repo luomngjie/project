@@ -1,0 +1,50 @@
+<view class="main"><!--src="{{src}}"-->
+  <video id="myVideo" class="myVideo" src="{{src}}"  poster="{{poster}}" autoplay="{{true}}" show-center-play-btn='{{false}}' 
+      show-play-btn="{{true}}" 
+      picture-in-picture-mode="{{['push', 'pop']}}"
+    ></video>
+
+  <view class="main-con">
+    <view class="main-con-left">
+      <image src="../image/water.png" class="main-con-left-img"></image>
+      <view class="main-con-left-tip">
+        <view class="main-con-left-tips-top over">贪玩贪玩蓝月贪玩蓝月贪玩蓝月贪玩蓝月贪玩蓝月蓝月</view>
+        <view class="main-con-left-tips-bottom over">拼多多----优惠多拼多多----优惠多拼多多----优惠多拼多多----优惠多拼多多----优惠多拼多多----优惠多</view>
+      </view>
+    </view>
+     <view class="main-con-right">
+      <view class="down" bindtap="downApk">下载应用</view>
+     </view>
+  </view>
+
+  <textarea  class="texteare" placeholder="请输入从抖音、快手、微视、等APP中复制的连接" bindblur="getTextVal" value="{{content}}"/>
+
+  <view class="btn">
+    <view class="btn-left style {{current==1?'active':''}}" bindtap="clearwatermark" data-id="1">一键去水印</view>
+    <view class="btn-right style {{current==2?'active':''}}" bindtap="clearwatermark" data-id="2">粘贴内容</view>
+  </view>
+
+  <view class="videos" wx:if="{{successUrl}}">
+    <video id="" class="successmyVideo" src="{{successUrl}}" poster="{{successposter}}" autoplay="{{true}}" show-center-play-btn='{{false}}' 
+          show-play-btn="{{true}}" 
+          picture-in-picture-mode="{{['push', 'pop']}}"
+        ></video>
+    <button class="downVideo" size="default" type="primary" plain="true" bindtap="saveVideo">保存到相册</button>
+  </view>
+  
+
+  <view class="videos"><button class="appreciate" size="default" type="primary" plain="true" bindtap="clearwatermark" data-id="3">赞赏作者</button></view>
+
+  <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='green' autoplay='true' interval='5000' duration='500'>
+      <block wx:for="{{imgUrl}}"  wx:key="index">
+        <swiper-item class="item_image">
+        <image src='{{item.url}}' class='swiper_image' mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+  </swiper>
+   <modal  hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel" confirmText="长按识别赞助" cancelText="我再想想">
+    <view>
+      <image class="image" src="../image/1.jpg" mode='aspectFill'></image>
+    </view>
+  </modal>
+</view>
