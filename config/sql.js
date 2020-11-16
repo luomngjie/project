@@ -9,15 +9,15 @@ let fa_admin = {
   queryById: "SELECT * FROM fa_admin WHERE id=?",
   queryAll: "SELECT * FROM fa_admin",
 };
-let teacher = {
-  insert: "INSERT INTO teacher(id, name) VALUES(?,?)",
-  update: "UPDATE teacher SET name=? WHERE id=?",
-  delete: "DELETE FROM teacher WHERE id=?",
-  queryById: "SELECT * FROM teacher WHERE id=?",
-  queryAll: "SELECT * FROM teacher",
+let video = {
+  insert: "INSERT INTO video(id, name) VALUES(?,?)",
+  update: "UPDATE video SET name=? WHERE id=?",
+  delete: "DELETE FROM video WHERE id=?",
+  queryById: "SELECT * FROM video WHERE id=?",
+  queryAll: "SELECT * FROM video",
 };
 
 module.exports = {
-  teacher,
+  video,
   fa_admin,
 };

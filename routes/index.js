@@ -34,6 +34,11 @@ router.get('/login', function(req, res, next) {
 /**视频去水印**/
 router.get("/video",(req, res, next)=>{
 	until.Videowm(req, res, next)
+});
+
+/**获取小程序个人中心列表**/
+router.get("/center",(req,res,next)=>{
+	db.dbQueryAll('video','',res,next)
 })
 
 
