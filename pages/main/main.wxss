@@ -1,8 +1,16 @@
 /**index.wxss**/
 .userinfo {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 33rpx;
+  background-color: #fff;
+  /* flex-direction: column; */
   align-items: center;
+}
+
+.get{
+  margin: 33rpx auto;
+
 }
 
 .userinfo-avatar {
@@ -18,4 +26,37 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+.name{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hr{
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.list{
+  display: flex;
+  padding:0 33rpx;
+  flex-direction: column;
+  border-radius: 15rpx;
+  margin: 33rpx;
+  align-items: flex-start;
+  background-color: #fff;
+}
+
+.item{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 26rpx;
+  padding: 23rpx 0;
+}
+
+image{
+  width: 43rpx;height: 43rpx;
 }
