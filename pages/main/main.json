@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "popup": "/components/popup/popup",
+    "swiper": "/components/swiper/swiper"
+  },
   "navigationBarTitleText": "我的"
+  
 }

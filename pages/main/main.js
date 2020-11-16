@@ -5,23 +5,22 @@ const app = getApp()
 Page({
   data: {
     motto: 'Hello World',
-    list:[
-      {
-        name:"使用教程",
-        id:0
-      },
-      {
-        name:"联系客服",
-        id:1
-      },
-      {
-        name:"赞赏作者",
-        id:2
-      }
-    ],
+    swiperShow:false,
+    list:[],
     userInfo: {},
+    url:"../image/1.jpg",
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
+  },
+
+  onReady: function () {
+    //获得popup组件
+    this.popup = this.selectComponent("#popup");
+    setTimeout(()=>{
+      this.setData({
+        swiperShow:true
+      })
+    },4000)
   },
   //事件处理函数
   bindViewTap: function() {
@@ -57,7 +56,7 @@ Page({
         }
       })
     }
-   
+   this.getManinList()
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -65,6 +64,52 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+
+  /**列表点击方法 */
+  Allmethod(e){
+    let self = this
+    let id = e.currentTarget.dataset.id
+    let data = this.data.list
+    const ret = data.filter(item=>item.id == id)
+    ret.forEach(item=>{
+      if(item.id==0){
+        self.togglePopup()
+       return
+      }
+     wx.showModal({
+       title:item.name,
+       content:item.content
+     })
+    })
+  },
+
+  /**   
+ * 预览图片  
+ */
+togglePopup: function (event) {   
+  this.popup.showPopup(); 
+ 
+  },  
+
+  /****获取个人中心列表 */
+  getManinList(){
+    let self = this
+    wx.showLoading()
+    wx.request({
+      url:'http://192.168.0.195:3000/center',
+      success:res=>{
+        if(res.data.code=='200'){
+          self.setData({
+            list:res.data.data
+          })
+          wx.hideLoading()
+        }else{
+          wx.hideLoading()
+        }
+       
+      }
     })
   }
 })

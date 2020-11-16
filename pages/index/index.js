@@ -5,10 +5,6 @@ const app = getApp()
 Page({
   data: {
     current:"1",//点击当前项
-    imgUrl:[
-      {url:"../image/1.jpg",id:0},
-      {url:"../image/1.jpg",id:2}
-    ],//轮播图数组
     modalHidden: true,//控制弹窗显示
     urlContent:"",//识别出来的url
     content:"",//粘贴板的内容
@@ -18,7 +14,10 @@ Page({
     name: '听完#彭昱畅的创业思路，我感觉错过几个亿 #刘昊然  #一点就到家',//视频标题
     src: 'https://minivideo.xiu123.cn/original/cb50cd8777fd483fac334058b952d1f2/1414b152-1737975592e.mp4',//视频链接地址
   },
-  
+  onReady: function () {
+    //获得popup组件
+    this.popup = this.selectComponent("#popup");
+  },
   onLoad: function () {
     let self = this
     wx.getClipboardData({//检测粘贴板内容 提取url
@@ -81,6 +80,7 @@ Page({
    */
   clearwatermark(e){
     let self = this
+    const arr = [1,2,3]
     this.setData({
       current:e.currentTarget.dataset.id
     })
@@ -106,27 +106,9 @@ Page({
         }
       })
     }else{
-      self.previewImg()
-      
+      this.popup.showPopup(); 
     }
    
-  },
-
-  /***图片预览 */
-  previewImg:function(e){
-    this.setData({
-      modalHidden: false
-    })
-    // var index = 0;
-    // var imgArr = this.data.imgUrl;
-    // console.log(imgArr[index].url)
-    // wx.previewImage({
-    //   current: imgArr[index].url,     //当前图片地址
-    //   urls: imgArr,               //所有要预览的图片的地址集合 数组形式
-    //   success: function(res) {},
-    //   fail: function(res) {},
-    //   complete: function(res) {},
-    // })
   },
 
   /**下载应用 */

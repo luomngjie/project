@@ -13,8 +13,8 @@
   </view>
 
   <view class="list" >
-  <block wx:for="{{list}}"  wx:key="index">
-     <view class="item" >
+  <block wx:for="{{list}}"  wx:key="index" wx:if="{{list.length>0}}">
+     <view class="item" data-id="{{item.id}}" bindtap="Allmethod">
       {{item.name}}
       <image src="../image/forward.png"></image>
     </view>
@@ -23,3 +23,9 @@
    
   </view>
 </view>
+
+<!-- 弹窗组件 -->
+ <swiper id='swiper' class="swiper" wx:if="{{swiperShow}}"></swiper>
+
+<!-- 弹窗组件 -->
+ <popup id='popup' ></popup>

@@ -35,16 +35,9 @@
 
   <view class="videos"><button class="appreciate" size="default" type="primary" plain="true" bindtap="clearwatermark" data-id="3">赞赏作者</button></view>
 
-  <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='green' autoplay='true' interval='5000' duration='500'>
-      <block wx:for="{{imgUrl}}"  wx:key="index">
-        <swiper-item class="item_image">
-        <image src='{{item.url}}' class='swiper_image' mode="aspectFill"></image>
-        </swiper-item>
-      </block>
-  </swiper>
-   <modal  hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel" confirmText="长按识别赞助" cancelText="我再想想">
-    <view>
-      <image class="image" src="../image/1.jpg" mode='aspectFill'></image>
-    </view>
-  </modal>
+  <!-- 轮播图组件 -->
+  <swiper id="swiper"></swiper>
+
+  <!-- 弹窗组件 -->
+ <popup id='popup' ></popup>
 </view>

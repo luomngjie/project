@@ -32,6 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 32rpx;
 }
 .hr{
   border-bottom: 1px solid #eee;
@@ -52,11 +53,20 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: flex-start;
-  font-size: 26rpx;
+  align-items: center;
+  font-size: 28rpx;
   padding: 23rpx 0;
 }
 
 image{
   width: 43rpx;height: 43rpx;
 }
+
+.swiper{
+  position: fixed;
+width: 100%;
+bottom: 20rpx;
+
+}
+
+

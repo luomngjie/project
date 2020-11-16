@@ -1,0 +1,8 @@
+<!--components/swiper/swiper.wxml-->
+  <swiper indicator-dots='true' indicator-color='gray' indicator-active-color='green' autoplay='true' interval='5000' duration='500'>
+      <block wx:for="{{imgUrl}}"  wx:key="index">
+        <swiper-item class="item_image">
+        <image src='{{item.url}}' class='swiper_image' mode="aspectFill"></image>
+        </swiper-item>
+      </block>
+  </swiper>

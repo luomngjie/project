@@ -1,0 +1,9 @@
+<!--components/popup/popup.wxml-->
+<view class="zan-popup {{ showPopup ? 'zan-popup--show' : ''}}" bindtap="hidePopup" wx:if="{{showPopup}}">
+    <view class="zan-popup__mask" ></view>
+    <view class="zan-popup__container popup-example--center">
+      <view class="zan-btns">
+        <image src='{{url}}' class="img"></image>
+      </view>
+    </view>
+  </view>
