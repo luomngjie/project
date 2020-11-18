@@ -49,8 +49,8 @@
         </i-col>
         <i-col :xs="24" :md="24" :lg="12" :xl="12" :xxl="12">
           <div class="main-item">
-<!--            <aMap :reContry = "true"></aMap>-->
-            <div class="main-item-top box map" id="map"></div>
+              <aMap :reContry = "true"  style="z-index:2; height:545px;"></aMap>
+<!--            <div class="main-item-top box map" id="map"></div>-->
             <div class="main-item-center">
               <div class="main-item-center-b box">
                 <chart-pie style="height: 100%;" :value="pieData" text="用户访问来源"></chart-pie>
