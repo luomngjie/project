@@ -1,3 +1,5 @@
+<script src="../../../components/charts/index.js"></script>
+<script src="index.js"></script>
 <template>
   <div>
     <Row :gutter="20">
@@ -10,7 +12,7 @@
     </Row>
     <Row :gutter="20" style="margin-top: 10px;">
       <i-col :md="24" :lg="8" style="margin-bottom: 20px;">
-        <Card shadow>
+        <Card shadow class="doxs">
           <chart-pie style="height: 300px;" :value="pieData" text="用户访问来源"></chart-pie>
         </Card>
       </i-col>
@@ -22,7 +24,7 @@
     </Row>
     <Row>
       <Card shadow>
-        <example style="height: 310px;"/>
+        <example style="height: 200px;"/>
       </Card>
     </Row>
   </div>
@@ -31,8 +33,7 @@
 <script>
 import InforCard from '_c/info-card'
 import CountTo from '_c/count-to'
-import { ChartPie, ChartBar } from '_c/charts'
-import Example from './example.vue'
+import { ChartPie, ChartBar, example } from '_c/charts'
 export default {
   name: 'home',
   components: {
@@ -40,7 +41,7 @@ export default {
     CountTo,
     ChartPie,
     ChartBar,
-    Example
+    example
   },
   data () {
     return {
@@ -76,8 +77,9 @@ export default {
 }
 </script>
 
-<style lang="less">
-.count-style{
-  font-size: 50px;
-}
+<style lang="less" scoped>
+  .count-style{
+    font-size: 50px;
+  }
+
 </style>

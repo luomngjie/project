@@ -1,5 +1,5 @@
 <template>
-    <div ref="dom"></div>
+    <div ref="dom" style="height: 200px;"></div>
 </template>
 
 <script>
@@ -20,33 +20,41 @@ export default {
   mounted () {
     const option = {
       tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-          type: 'cross',
-          label: {
-            backgroundColor: '#6a7985'
-          }
+        trigger: 'axis'
+      },
+      legend: {
+        data:['最高','最低']
+      },
+      toolbox: {
+        show: true,
+        feature: {
+          dataZoom: {
+            yAxisIndex: 'none'
+          },
+          dataView: {readOnly: false},
+          magicType: {type: ['line', 'bar']},
+          restore: {},
+          saveAsImage: {}
+        }
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['2019-02-25','2019-03-04','2019-03-18','2019-03-26','2019-04-16','2019-04-26','2019-05-04']
+      },
+      yAxis: {
+        type: 'value',
+        axisLabel: {
+          formatter: '{value}'
         }
       },
       grid: {
-        top: '3%',
-        left: '1.2%',
-        right: '1%',
-        bottom: '3%',
+        top: '15%',
+        left: '1.5%',
+        right: '3%',
+        bottom: '20%',
         containLabel: true
       },
-      xAxis: [
-        {
-          type: 'category',
-          boundaryGap: false,
-          data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-        }
-      ],
-      yAxis: [
-        {
-          type: 'value'
-        }
-      ],
       series: [
         {
           name: '运营商/网络服务',
@@ -55,7 +63,7 @@ export default {
           areaStyle: { normal: {
             color: '#2d8cf0'
           } },
-          data: [120, 132, 101, 134, 90, 230, 210]
+          data: [65, 106, 203, 22, 98, 110, 321]
         },
         {
           name: '银行/证券',
@@ -97,7 +105,7 @@ export default {
           areaStyle: { normal: {
             color: '#398DBF'
           } },
-          data: [820, 645, 546, 745, 872, 624, 258]
+          data: [23, 132, 332, 107, 45, 231, 88]
         }
       ]
     }

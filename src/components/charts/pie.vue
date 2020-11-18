@@ -35,6 +35,7 @@ export default {
         },
         tooltip: {
           trigger: 'item',
+          transitionDuration: 0,
           formatter: '{a} <br/>{b} : {c} ({d}%)'
         },
         legend: {
