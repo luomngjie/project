@@ -49,7 +49,7 @@
         </i-col>
         <i-col :xs="24" :md="24" :lg="12" :xl="12" :xxl="12">
           <div class="main-item">
-              <aMap :reContry = "true"  style="z-index:2; height:545px;"></aMap>
+              <aMap :reContry = "true"  style="z-index:2; height:545px;margin-bottom: 5px;"></aMap>
 <!--            <div class="main-item-top box map" id="map"></div>-->
             <div class="main-item-center">
               <div class="main-item-center-b box">
